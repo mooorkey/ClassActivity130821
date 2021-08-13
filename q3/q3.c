@@ -76,15 +76,18 @@ int main() {
                     {1,2,3,4,5,6,7,8,9 },
                     {1,0,0,0,1,0,0,0,1 } 
                                         };
-    double numbers2[][9] = { 
-                    {1,2,3,4,5,6},
-                    {1,0,0,0,1,0,0,0,1 } 
-                                        };
+
     fill_matrix(m1, M, N, numbers[0], M*N);
+
     double **transpose_mat = Transpose(m1, M, N);
+
     printf("m1 :\n");
     print_matrix(m1, M, N);
+
     printf("m1 transpose :\n");
     print_matrix(transpose_mat, M, N);
+    
+    free_matrix(m1, M, N);
+    free_matrix(transpose_mat, M, N);
     return 0;
 }
