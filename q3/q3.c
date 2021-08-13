@@ -81,10 +81,10 @@ int main() {
                     {1,0,0,0,1,0,0,0,1 } 
                                         };
     fill_matrix(m1, M, N, numbers[0], M*N);
-    double **transposemat = Transpose(m1, M, N);
-    printf("m1\n");
+    double **transpose_mat = Transpose(m1, M, N);
+    printf("m1 :\n");
     print_matrix(m1, M, N);
-    printf("m1 transpose\n");
-    print_matrix(transposemat, M, N);
+    printf("m1 transpose :\n");
+    print_matrix(transpose_mat, M, N);
     return 0;
 }
