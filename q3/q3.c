@@ -52,7 +52,7 @@ double **copy_matrix(
 {
 for ( int r=0; r < m; r++ ) {
     for ( int c=0; c < n; c++ ) {
-dst[r][c] = src[c][r];
+dst[r][c] = src[r][c];
         }
     }
     return dst;
@@ -61,6 +61,10 @@ dst[r][c] = src[c][r];
 double **Transpose(double **mat, int M, int N){
     double **transpose = matrix(N, M);
     copy_matrix(transpose, mat, M,N);
+    printf("copied\n");
+    print_matrix(transpose, M, N);
+    printf("\n\n");
+
     for(int i = 0;i < N;i++){
         for(int j = 0;j < M;j++){
             transpose[j][i] = mat[i][j];
@@ -86,7 +90,7 @@ int main() {
 
     printf("m1 transpose :\n");
     print_matrix(transpose_mat, M, N);
-    
+
     free_matrix(m1, M, N);
     free_matrix(transpose_mat, M, N);
     return 0;
