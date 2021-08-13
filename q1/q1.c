@@ -57,9 +57,10 @@ double **IdentityMat(int size1, int size2){
 }
 
 int main() {
-    int M = 2, N = 2;
+    int M = 5, N = 5;
     double **m1 = IdentityMat(M, N);
 
+    printf("identity matrix : \n");
     print_matrix( m1, M, N );
     free_matrix(m1, M, N);
     return 0;
